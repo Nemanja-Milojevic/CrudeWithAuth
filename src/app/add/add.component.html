@@ -1,0 +1,13 @@
+<nb-layout>
+    <nb-layout-header><h2>Crude</h2></nb-layout-header>
+    <nb-layout-column class="container">
+        <input #inputId class="input" nbInput placeholder="Id"><br>
+        <input #inputName class="input" nbInput placeholder="Name"><br>
+        <input #inputSurname class="input" nbInput placeholder="Surname"><br>
+        <input #inputIndex class="input" nbInput placeholder="Index"><br>
+        <button class="add" nbButton status="info" (click) = "addStudent(inputId.value, inputName.value, inputSurname.value, inputIndex.value)">Add</button><br>
+        <button class="add" nbButton status="info" routerLink = "/index">Back</button>
+
+    </nb-layout-column>
+    <nb-layout-footer>Contact us</nb-layout-footer>
+  </nb-layout>

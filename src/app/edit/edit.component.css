@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    flex-flow: column;
+    align-items: center
+}
+
+.edit{
+    width: 250px
+}
+
+.input{
+    width: 400px
+}

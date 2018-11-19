@@ -1,0 +1,27 @@
+<nb-layout>
+    <nb-layout-header><h2>Edit</h2></nb-layout-header>
+    <nb-layout-column>
+        <h3>List</h3>
+        <nb-card size="medium">
+            <nb-card-header>
+              Students
+            </nb-card-header>
+            <nb-list>
+              <nb-list-item *ngFor="let list of students" (dblclick) = "inputId.value = list.id; inputName.value = list.name; inputSurname.value = list.surname; inputIndex.value = list.index">
+                  {{list.id}} {{list.name}} {{list.surname}} {{list.index}}
+              </nb-list-item>
+            </nb-list>
+          </nb-card>
+    </nb-layout-column>
+    <nb-layout-column>
+      <h3>Control</h3>
+        <div class="container">
+          <input #inputId [(ngModel)] = "inpId" class="input" nbInput placeholder="Id"><br>
+          <input #inputName [(ngModel)] = "inpName" class="input" nbInput placeholder="Name"><br>
+          <input #inputSurname [(ngModel)] = "inpSurname" class="input" nbInput placeholder="Surname"><br>
+          <input #inputIndex [(ngModel)] = "inpIndex" class="input" nbInput placeholder="Index"><br>
+          <button class="edit" nbButton status="info" (click) = "editStudent(inputId.value, inputName.value, inputSurname.value, inputIndex.value)">Edit</button><br>
+          <button class="edit" nbButton status="info" routerLink = "/index">Back</button>
+        </div>
+    </nb-layout-column>
+  </nb-layout>
